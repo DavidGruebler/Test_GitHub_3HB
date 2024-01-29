@@ -4,24 +4,42 @@ public class Circle extends Product {
 	
 	private double radius;
 
-	public final double pi = 3.14;
+	public Circle(double y, double x, double radius) {
+		super(y, x);
+		this.radius = radius;
+	}
 	
-	public Circle(double x, double y, double radius) {
-		this.setX(x);
-		this.setY(y);
+	
+	
+	public double getRadius() {
+		return radius;
+	}
+
+
+
+	public void setRadius(double radius) {
 		this.radius = radius;
 	}
 
+
+
 	@Override
-	public double calculateCircumference() {
-		return 2 * this.pi * this.radius;
-	}
- 
-	@Override
+	/**
+	 * calculates area of Circle by using Math.Pi
+	 */
 	public double calculateArea() {
-		return this.pi * this.radius * this.radius;
+		return Math.PI * radius * radius;
+		
 	}
-	public String toString() {
-		return "Circle:\n\t" + "Radius: " + this.radius;
+
+	@Override
+	/**
+	 * calculates circumference of Circle by using Math.PI
+	 */
+	public double calculateCircumference() {
+		return 2 * Math.PI * radius;
 	}
+	
+	
+
 }
