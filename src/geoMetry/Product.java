@@ -5,6 +5,13 @@ public abstract class Product {
 	private double y;
 	private double x;
 	
+	public Product(double y, double x) {
+		super();
+		this.y = y;
+		this.x = x;
+	}
+	
+	
 	public double getY() {
 		return y;
 	}
@@ -18,12 +25,26 @@ public abstract class Product {
 		this.x = x;
 	}
 	
+	
+	
 	@Override
 	public String toString() {
-		return "Product [y=" + y + ", x=" + x + "]";
+		return "Calculations [y=" + y + ", x=" + x + "]";
 	}
 	
+	/**
+	 * abstract method for calculations of circumferences
+	 * @return
+	 */
 	public abstract double calculateCircumference();
+	
+	/**
+	 * abstract method for calculations of areas
+	 * @return
+	 */
 	public abstract double calculateArea();
+	
+	
+	
 
 }
