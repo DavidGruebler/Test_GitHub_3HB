@@ -29,5 +29,4 @@ public class Comments {
 		return "Comments [userName=" + userName + ", message=" + message + "]";
 	}
 	
-
 }
