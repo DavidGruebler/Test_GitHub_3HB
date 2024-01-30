@@ -6,15 +6,14 @@ import java.util.ArrayList;
 public class MessageFacts {
 	   private String authorUsername;
 	   private LocalDate timestamp;
-	   private ArrayList<String> comments;
+	   private ArrayList<Comments> comments;
 	   private int likes;
 	   
-	  
-	public MessageFacts(String authorUsername, LocalDate timestamp, ArrayList<String> comments, int likes) {
+	public MessageFacts(String authorUsername) {
 		this.authorUsername = authorUsername;
-		this.timestamp = timestamp;
-		this.comments = comments;
-		this.likes = likes;
+		this.timestamp = LocalDate.now();
+		this.likes = 0;
+		this.comments = new ArrayList<>();
 	}
 	
 	public String getAuthorUsername() {
@@ -33,14 +32,14 @@ public class MessageFacts {
 		this.timestamp = timestamp;
 	}
 	
-	public ArrayList<String> getComments() {
+	public ArrayList<Comments> getComments() {
 		return comments;
 	}
-	
-	public void setComments(ArrayList<String> comments) {
+
+	public void setComments(ArrayList<Comments> comments) {
 		this.comments = comments;
 	}
-	
+
 	public int getLikes() {
 		return likes;
 	}
