@@ -1,15 +1,14 @@
 package theSocialNetwork;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
+
 
 public class Messages extends MessageFacts {
 	
 	private String messageText;
 	
 	
-	public Messages(String authorUsername, LocalDate timestamp, ArrayList<String> comments, int likes,String messageText) {
-		super(authorUsername, timestamp, comments, likes);
+	public Messages(String authorUsername, String messageText) {
+		super(authorUsername);
 		this.messageText = messageText;
 	}
 
