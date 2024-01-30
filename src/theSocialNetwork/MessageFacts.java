@@ -3,14 +3,14 @@ package theSocialNetwork;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class MassageFacts {
+public class MessageFacts {
 	   private String authorUsername;
 	   private LocalDate timestamp;
 	   private ArrayList<String> comments;
 	   private int likes;
 	   
 	  
-	public MassageFacts(String authorUsername, LocalDate timestamp, ArrayList<String> comments, int likes) {
+	public MessageFacts(String authorUsername, LocalDate timestamp, ArrayList<String> comments, int likes) {
 		this.authorUsername = authorUsername;
 		this.timestamp = timestamp;
 		this.comments = comments;
