@@ -3,7 +3,7 @@ package theSocialNetwork;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class MessageFacts {
+public abstract class MessageFacts {
 	   private String authorUsername;
 	   private LocalDate timestamp;
 	   private ArrayList<Comments> comments;
@@ -47,7 +47,4 @@ public class MessageFacts {
 	public void setLikes(int likes) {
 		this.likes = likes;
 	}
-	   
-	   
-
 }
