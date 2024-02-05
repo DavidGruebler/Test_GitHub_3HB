@@ -1,11 +1,11 @@
 package theSocialNetwork;
 
-public class photo extends MessageFacts{
+public class Photo extends MessageFacts{
 	
 	private String dataName;
 	private String headline;
 	
-	public photo(String authorUsername, String dataName, String headline) {
+	public Photo(String authorUsername, String dataName, String headline) {
 		super(authorUsername);
 		this.dataName = dataName;
 		this.headline = headline;
