@@ -1,7 +1,5 @@
 package theSocialNetwork;
 
-
-
 public class Messages extends MessageFacts {
 	
 	private String messageText;
@@ -20,6 +18,4 @@ public class Messages extends MessageFacts {
 		this.messageText = messageText;
 	}
 	
-	
-
 }
