@@ -8,9 +8,6 @@ public class NewsFeed {
 
     private ArrayList<MessageFacts> entries;
 
-    /**
-     * Creates a new news feed; The news feed is initially empty
-     */
     public NewsFeed() {
         entries = new ArrayList<>();
     }
