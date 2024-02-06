@@ -2,17 +2,21 @@ package theSocialNetwork;
 
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class NewsFeed {
 
     private ArrayList<MessageFacts> entries;
 
     public NewsFeed() {
-        entries = new ArrayList<>();
+        this.entries = new ArrayList<MessageFacts>();
     }
-    
-    /**
+        
+    @Override
+	public String toString() {
+		return "NewsFeed [entries=" + entries + "]";
+	}
+
+	/**
      * method to create new entries 
      * @param the entry to be added
      */
@@ -32,7 +36,7 @@ public class NewsFeed {
      * Returns the collection of entries
      * @return the collection of entries
      */
-    public List<MessageFacts> getEntries() {
+    public ArrayList<MessageFacts> getEntries() {
         return entries;
     }
     
@@ -50,8 +54,8 @@ public class NewsFeed {
      * @param author
      * @return the result
      */
-    public List<MessageFacts> findEntriesByAuthor(String author) {
-        List<MessageFacts> results = new ArrayList<>();
+    public ArrayList<MessageFacts> findEntriesByAuthor(String author) {
+        ArrayList<MessageFacts> results = new ArrayList<>();
         for (MessageFacts entry : entries) {
             if (entry.getAuthorUsername().equals(author)) {
                 results.add(entry);
@@ -66,8 +70,8 @@ public class NewsFeed {
      * @param author
      * @return the result
      */
-    public List<MessageFacts> findPhotosByAuthor(String author) {
-        List<MessageFacts> results = new ArrayList<>();
+    public ArrayList<MessageFacts> findPhotosByAuthor(String author) {
+        ArrayList<MessageFacts> results = new ArrayList<>();
         for (MessageFacts entry : entries) {
             if (entry instanceof Photo && entry.getAuthorUsername().equals(author)) {
                 results.add(entry);
