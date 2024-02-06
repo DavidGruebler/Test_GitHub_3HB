@@ -17,5 +17,16 @@ public class Messages extends MessageFacts {
 	public void setMessageText(String messageText) {
 		this.messageText = messageText;
 	}
+
+	@Override
+	public String toString() {
+		return "Message:" +
+				"\n" + this.getAuthorUsername() + " posted: " + this.getMessageText() +
+				"\n" + "Likes: " + this.getLikes() +
+				"\n" + "Posttime: " + this.getTimestamp() +
+				"\n" + "Comments: " +this.getComments()+ "\n" + "-----------------------";
+	}
+	
+	
 	
 }
