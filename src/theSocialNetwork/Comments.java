@@ -24,9 +24,4 @@ public class Comments {
 		this.message = message;
 	}
 
-	@Override
-	public String toString() {
-		return "Comments [userName=" + userName + ", message=" + message + "]";
-	}
-	
 }
