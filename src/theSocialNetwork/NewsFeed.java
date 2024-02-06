@@ -54,29 +54,12 @@ public class NewsFeed {
      * @param author
      * @return the result
      */
-    public ArrayList<MessageFacts> findEntriesByAuthor(String author) {
-        ArrayList<MessageFacts> results = new ArrayList<>();
-        for (MessageFacts entry : entries) {
-            if (entry.getAuthorUsername().equals(author)) {
-                results.add(entry);
-            }
-            System.out.println(this.findEntriesByAuthor(author));
-        }
-        return results;
-    }
-
-    /**
-     * method to find photos
-     * @param author
-     * @return the result
-     */
-    public ArrayList<MessageFacts> findPhotosByAuthor(String author) {
-        ArrayList<MessageFacts> results = new ArrayList<>();
-        for (MessageFacts entry : entries) {
-            if (entry instanceof Photo && entry.getAuthorUsername().equals(author)) {
-                results.add(entry);
-            }
-        }
-        return results;
+    public void findEntriesByAuthor(String author) {
+    	for(MessageFacts s : this.entries) {
+    		if(s.getAuthorUsername().equals(author)) {
+    			System.out.println(s);
+    		}
+    	}
+        
     }
 }
