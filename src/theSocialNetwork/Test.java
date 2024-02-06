@@ -14,7 +14,6 @@ public class Test {
 		
 		n1.addEntry(m1);
 		n1.addEntry(m2);
-		
 		n1.printEntries();
 		
 	}
