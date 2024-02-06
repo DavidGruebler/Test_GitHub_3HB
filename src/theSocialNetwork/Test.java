@@ -16,6 +16,9 @@ public class Test {
 		n1.addEntry(m2);
 		n1.printEntries();
 		
+		n1.findEntriesByAuthor("Paul");
+		
+		
 	}
 
 }
