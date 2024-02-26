@@ -1,4 +1,5 @@
 package arrays;
+
 public class Exercise1 {
    public static int count5PercentJumps(int[] gains) {
        int jumps = 0;
