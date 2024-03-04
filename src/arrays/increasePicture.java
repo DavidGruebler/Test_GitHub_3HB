@@ -4,7 +4,7 @@ public class increasePicture {
 	
 	int[][] array = new int[3][3];
 	
-	public static int[][] magnify(int[][] array, int factor) {
+	public static int[][] magnify1(int[][] array, int factor) {
         int zeile = array.length;
         int spalte = array[0].length;
 
@@ -22,14 +22,26 @@ public class increasePicture {
         return magnifiedArray;
     }
 	
+	//tag::solution[]
+	  public static int[][] magnify( int[][] array, int factor ) {
+	    int width = array[ 0 ].length;
+	    int height = array.length;
+	    int[][] result = new int[ height * factor ][ width * factor ];
+
+	    for ( int row = 0; row < result.length; row++ ) {
+	      int[] cols = result[ row ];
+	      for ( int col = 0; col < cols.length; col++ )
+	        cols[ col ] = array[ row / factor ][ col / factor ];
+	    }
+	    return result;
+	  }
+	
 
 	public static void main(String[] args) {
 		
-		int[][] array = {{1, 2, 3},{4, 5, 6}
-	        };
-	        int factor = 2;
-
-	        int[][] magnifiedArray = magnify(array, factor);
+		int[][] testArray = new int[ 2 ][ 5 ];
+	    int[][] result = magnify( testArray, 2 );
+	    
 
 	}
 
