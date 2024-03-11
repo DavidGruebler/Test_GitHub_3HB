@@ -50,14 +50,16 @@ public class MusicalChair {
 	
 	public String playGame() {
 		
-		while(this.names.size() > 1) {
-			int num = ThreadLocalRandom.current().nextInt();
-			rotateAndRemove(num);
-			System.out.println("Im rennen sind noch: "+ this.toString());
-			
+		if(!this.names.isEmpty()) {
+			while(this.names.size() > 1) {
+				int random = ThreadLocalRandom.current().nextInt();
+				this.rotateAndRemove(random);
+				System.out.println(this.names);
+			}
 		}
-		System.out.println("Der Gewinner ist:"+this.toString());
+		
 		return this.toString();
 	}
 
 }
+    b   
