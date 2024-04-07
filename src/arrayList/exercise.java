@@ -3,7 +3,7 @@ package arrayList;
 import java.util.List;
 import java.util.ArrayList;
 
-public class exercise1 {
+public class exercise {
 	
 	public static void reduceToComments(List<String>lines) {
 		for(int i=0; i<lines.size(); i+=3) {
