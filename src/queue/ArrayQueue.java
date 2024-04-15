@@ -32,7 +32,7 @@ public class ArrayQueue {
      * Removes and returns the first element from the queue.
      * @return The removed element, or 0 if the queue is empty.
      */
-	public  int queueDequeue() {
+	public   int queueDequeue() {
 		int firstElement= 0;
 		if(rear == front) {
 			System.out.println("Queue ist leer");
