@@ -1,12 +1,12 @@
 package stack;
 
-	import java.util.Stack;
+import java.util.LinkedList;
 
 public class Bracket {
 
 		public static boolean checkBrackets(String input) {
 			
-			Stack<Character> Stack = new Stack<>();
+			LinkedList<Character> Stack = new LinkedList<>();
 			 
 	        for (char c : input.toCharArray()) {
 	            if (c == '(' || c == '{' || c == '[') {
@@ -16,15 +16,14 @@ public class Bracket {
 	                	return false;
 	                }
 	 
-	                char letzterÖffner = Stack.pop();
+	                char lastOpen = Stack.peek();
 	 
-	                if (letzterÖffner == '(' && c != ')') {
-	                	return false;
-	                } else if (letzterÖffner == '{' && c != '}') {
-	                	return false;
-	                } else if (letzterÖffner == '[' && c != ']') {
+	                if ((lastOpen == '(' && c != ')') ||
+	                	(lastOpen == '{' && c != '}') ||
+	                	(lastOpen == '[' && c != ']')) {
 	                	return false;
 	                }
+	                Stack.pop();
 	            }
 	        }
 	 
@@ -33,9 +32,10 @@ public class Bracket {
 
 		public static void main(String[] args) {
 			
-		String ausdruck1 = "(a + b) * (c - d)";
+		String ausdruck1 = "({})";
+		String ausdruck2 = "moin";
 			
-		if(checkBrackets(ausdruck1) == true) {
+		if(checkBrackets(ausdruck2) == true) {
 			System.out.println("Korrekte Klammerung");
 		} else {
 			System.out.println("Fehlerhafte Klammerung");
